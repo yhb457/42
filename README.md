@@ -54,8 +54,11 @@ int	ft_memcmp(const void *b1, const void *b2, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t size);
 ```
 * malloc과 비슷한데 calloc은 할당된 공간의 값을 모두 0으로 바꾼다
+* ```tmp = malloc(count * size);```
+* ```ft_bzero(tmp, (count * size));```
+## calloc
 ```c
-tmp = malloc(count * size);
-ft_bzero(tmp, (count * size));
-'''
-## strmapi
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+```
+*  문자열 s에 함수 f를 적용하는 함수이다(strtrim이나 substr)
+*  f에는 index와 index로 탐색한 문자 하나를 인자로 받음
